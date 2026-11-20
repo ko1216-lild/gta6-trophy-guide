@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and progress tracker for all 55 official PlayStation 5 trophies of Grand Theft Auto VI: full guides, a roadmap to the platinum, missable warnings and spoiler controls.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">A complete trophy guide &amp; tracker for all 55 official trophies — every guide in our own words, with a roadmap to the platinum, missable warnings and spoiler controls. No network needed: open it, play, tick things off.</p>
+    <div class="summary" id="summary">
+      <div class="stat"><span class="stat-num" id="stat-count">0 / 55</span><span class="stat-label">trophies earned</span></div>
+      <div class="stat"><span class="stat-num" id="stat-percent">0%</span><span class="stat-label">of the list</span></div>
+      <div class="stat"><span class="stat-num" id="stat-points">0</span><span class="stat-label">trophy points</span></div>
+      <div class="stat"><span class="stat-num" id="stat-left">55</span><span class="stat-label">still to go</span></div>
+    </div>
+    <div class="bar" role="progressbar" aria-label="Overall completion"><div class="bar-fill" id="bar-fill"></div></div>
+    <div class="grade-bars" id="grade-bars"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="checklist">Checklist &amp; guides</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to the Platinum</button>
+  <button type="button" class="tab" data-view="missable">Missable trophies</button>
+</nav>
+
+<section id="view-checklist" class="view">
+  <div class="controls" role="search">
+    <label class="grow">Search
+      <input id="search" type="search" placeholder="Search names, descriptions, guides…" autocomplete="off">
+    </label>
+    <label>Grade
+      <select id="f-grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Kind
+      <select id="f-kind"><option value="all">All kinds</option></select>
+    </label>
+    <label>Status
+      <select id="f-status">
+        <option value="all">Earned &amp; unearned</option>
+        <option value="earned">Earned only</option>
+        <option value="unearned">Not earned yet</option>
+      </select>
+    </label>
+    <label>Secret
+      <select id="f-secret">
+        <option value="all">Secret &amp; regular</option>
+        <option value="secret">Secret only</option>
+        <option value="regular">Non-secret only</option>
+      </select>
+    </label>
+    <label class="check"><input id="f-missable" type="checkbox"> Missable only</label>
+    <label class="check"><input id="spoilers" type="checkbox"> Show spoilers</label>
+    <div class="io">
+      <button id="export" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    </div>
+  </div>
+  <p class="count-line" id="count-line"></p>
+  <main id="cards" class="cards"></main>
+  <p class="empty" id="empty" hidden>No trophies match those filters. Loosen a filter or clear the search.</p>
+</section>
+
+<section id="view-roadmap" class="view" hidden>
+  <div class="roadmap-head">
+    <h2>Roadmap to the Platinum</h2>
+    <p>Seven phases, built from the official trophy descriptions and ordered the way the game wants to be played: story first (with the missable warnings up front), then people and activities, then the map, then the grind, then 100%. Roughly: the story is the spine, everything else hangs off it.</p>
+    <ol class="principles">
+      <li><strong>Make a manual save before the final mission</strong> and keep it. It is cheap insurance for every one-chance moment.</li>
+      <li><strong>Choose actively.</strong> Whenever the game offers a decision, make one; do not let timers expire (see Actions Speak Louder).</li>
+      <li><strong>Sample everything once early.</strong> One try at each activity type banks Master of None and shows you what you enjoy grinding.</li>
+      <li><strong>Spend and register as you go.</strong> Shop spending, vehicle discovery and Scooter Bros registrations all climb for free while you play.</li>
+    </ol>
+  </div>
+  <div id="phases"></div>
+</section>
+
+<section id="view-missable" class="view" hidden>
+  <div class="roadmap-head">
+    <h2>Missable trophies</h2>
+    <p>Most of this list can be earned in any order, at any time, in free roam. The trophies below are the exceptions we flag, conservatively, because their official descriptions imply a one-chance moment or a story choice you cannot revisit. Each card explains exactly why it is flagged.</p>
+    <ol class="principles">
+      <li><strong>Keep two save slots:</strong> your main save, plus a manual save from before the final story stretch.</li>
+      <li><strong>Never reload away a failure</strong> until Bad Luck, I Guess has popped; a retry you succeed on may be the trophy.</li>
+      <li><strong>Decide, don't drift:</strong> when a choice prompt appears, answer it. Expired choices may not come back.</li>
+    </ol>
+  </div>
+  <main id="missable-cards" class="cards"></main>
+</section>
+
+<footer>
+  <p>Guide text written for this app. Trophy names, descriptions and grades are the official PlayStation 5 list for Grand Theft Auto VI (published 2026-11-18), cross-checked against Exophase's GTA VI trophy page. Trophy points use the standard PlayStation values: bronze 15, silver 30, gold 90, platinum 300. This is a fan-made guide: not affiliated with Rockstar Games or Take-Two Interactive, and it uses no official artwork or logos. Progress is stored only in your browser (localStorage); export it to keep a backup.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
