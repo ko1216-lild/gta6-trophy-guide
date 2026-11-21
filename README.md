@@ -37,3 +37,11 @@ used anywhere.
 ```sh
 node serve.ts   # then open http://localhost:8080
 ```
+
+## Round 2 revision
+
+This README has been re-issued for the round-2 submission of this
+entry: its final content is written inside a recorded session, so
+the hand-in's transcript record covers the README exactly as
+submitted. No application or source files were changed in this
+revision — the guide app itself is identical to round 1.
