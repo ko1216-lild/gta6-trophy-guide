@@ -6,31 +6,39 @@
 
 # gta6-trophy-guide-01 — entry
 
-An offline guide and tracker for the 55 official PlayStation 5
-trophies of Grand Theft Auto VI — an entry for make.fun's bounty
-*gta6-trophy-guide-01*. Static files under `app/`, no network, no
-libraries; open `app/index.html` in a desktop browser.
+This repository holds an offline guide and progress tracker for
+the 55 official PlayStation 5 trophies of Grand Theft Auto VI,
+built as an entry for make.fun's *gta6-trophy-guide-01* bounty.
+Everything is a static file under `app/`: there is no network
+access and no third-party library involved. To use it, simply
+open `app/index.html` in a desktop browser.
 
-- Every trophy with its exact official name, official description
-  and grade, plus a guide in our own words (what to do, where and
-  how, and when it can be missed), with sources cited.
-- Checklist saved in the browser (localStorage), with export and
-  import of your progress as JSON.
-- Filters by grade, kind, earned state, missable and secret, plus
-  full-text search; a spoiler setting hides secret and story
-  trophies until you earn them or turn spoilers on.
-- A seven-phase Roadmap to the Platinum built from the official
-  descriptions, and a Missable trophies view (2 of the 55 flagged,
-  conservatively, each with its reason in its guide).
-- Progress summary: count, percent, trophy points and a per-grade
-  breakdown.
+What the guide gives you:
 
-`main.ts` copies `app/` and `screenshots/` to the output directory
-and writes `dossier.json` via the kit's vendored
-`vendor/makefun-frontend.ts` (unchanged), then verifies the hand-in
-and prints a build summary. The screenshots in `screenshots/` are
-real renders of this app. No Rockstar logo or official artwork is
-used anywhere.
+- All 55 trophies, each shown with its exact official name,
+  official description and grade, together with a guide written
+  in our own words — what the trophy asks for, where and how to
+  do it, and whether it can be missed — with sources cited.
+- A checklist that persists in the browser through localStorage,
+  and can be exported to or imported from a JSON file.
+- Filtering by grade, kind, earned state, missable and secret,
+  plus full-text search. A spoiler setting keeps secret and
+  story trophies hidden until they are earned or spoilers are
+  switched on.
+- A Roadmap to the Platinum in seven phases, assembled from the
+  official trophy descriptions, and a dedicated Missable view —
+  2 of the 55 trophies are flagged, conservatively, and each
+  flag carries its reason inside that trophy's guide.
+- A progress summary with the earned count, percentage, trophy
+  points and a breakdown per grade.
+
+The hand-in program `main.ts` copies `app/` and `screenshots/`
+into the output directory and writes `dossier.json` through the
+kit's vendored `vendor/makefun-frontend.ts`, which is unchanged;
+it then verifies the hand-in and prints a build summary. The
+images under `screenshots/` are genuine renders of this app.
+No Rockstar logo or official artwork appears anywhere in the
+entry.
 
 ## Run it
 
@@ -40,8 +48,9 @@ node serve.ts   # then open http://localhost:8080
 
 ## Round 2 revision
 
-This README has been re-issued for the round-2 submission of this
-entry: its final content is written inside a recorded session, so
-the hand-in's transcript record covers the README exactly as
-submitted. No application or source files were changed in this
-revision — the guide app itself is identical to round 1.
+For the round-2 submission of this entry, this README has been
+re-issued from within a recorded session, so that the hand-in's
+transcript record covers the README in exactly the form
+submitted. Nothing else changed: no application or source files
+were touched in this revision, and the guide app itself is
+identical to round 1.
